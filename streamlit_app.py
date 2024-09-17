@@ -169,6 +169,7 @@ with tab2:
     )
     st.plotly_chart(fig, use_container_width=True)
 
+# Summary
 st.write("""
 From the initial inspection of the dataset, here are some key variables present:
 
@@ -186,6 +187,7 @@ From the initial inspection of the dataset, here are some key variables present:
 I will now perform some exploratory data analysis (EDA) to find deeper insights into this dataset, such as relationships between price and other factors, popular airlines, and more.
 
 Here are some key insights from the exploratory data analysis (EDA) based on the summary statistics:
+
 1. **Flight Duration**:
    - The average flight duration is approximately 630 minutes (around 10.5 hours).
    - The shortest flight duration is 5 minutes, and the longest is 2860 minutes (about 47.5 hours), indicating a wide range of flight durations.
@@ -200,4 +202,5 @@ Here are some key insights from the exploratory data analysis (EDA) based on the
    - There is significant variation in flight prices, suggesting that factors such as airline, duration, and number of stops may heavily influence the price.
 
 4. **Day of Travel**:
-   - Flights are spread across different days of the month, with no specific pattern based on the day
+   - Flights are spread across different days of the month, with no specific pattern based on the day.
+""")
