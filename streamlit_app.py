@@ -186,10 +186,10 @@ Here are some key insights from the exploratory data analysis (EDA) based on the
 6. **Departure Hour**:
    - The average departure time is around 12:45 PM.
    - The earliest departure is at midnight (0:00), and the latest is at 11:00 PM (23:00).
-''')
-    st.write('''
+""")
+    st.write("""
 1. **Average Price vs. Total Stops**:
-   - Flights with more stops tend to have higher average prices, especially for flights with 2 or more stops. This suggests that additional stops increase the cost of the flight.''')
+   - Flights with more stops tend to have higher average prices, especially for flights with 2 or more stops. This suggests that additional stops increase the cost of the flight.""")
     
     plt.figure(figsize=(20,10))
     sns.barplot(data=df.sort_values('Price',ascending=False), x='Total_Stops', y='Price')
