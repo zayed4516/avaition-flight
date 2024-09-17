@@ -199,7 +199,9 @@ Here are the insights from the visualizations:""")
     plt.title('Correlation Heatmap of Numerical Variables')
     st.pyplot(plt)
 
-        st.write("""Here are some additional insights and predictions:
+# Prediction Page
+with tab3:
+    st.write("""Here are some additional insights and predictions:
 
 7. **Prediction Page**
     - This page allows users to input parameters and get predictions on flight prices.
@@ -241,5 +243,3 @@ Here are the insights from the visualizations:""")
             prediction = model.predict(input_data)
 
             st.write(f"The predicted flight price is: {prediction[0]:,.2f}")
-
-# Additional data exploration and visualization can be added here as needed.
