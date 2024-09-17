@@ -27,6 +27,7 @@ st.markdown("""
 # Load data
 df = pd.read_csv('cleaned_df.csv')
 
+# Sidebar
 with st.sidebar:
     st.sidebar.image('R.jpg', use_column_width=True)
     st.sidebar.subheader("This dashboard for Indian Aviation Flights Fare aimed at predicting the prices of flight tickets")
@@ -85,10 +86,16 @@ highest_Price = filtered_data['Price'].max()
 lowest_Price = filtered_data['Price'].min()
 top_airline = filtered_data['Airline'].value_counts().idxmax()
 
+# Ensure all values are of the correct type for display
+flight_count = int(flight_count) if not pd.isnull(flight_count) else 0
+highest_Price = float(highest_Price) if not pd.isnull(highest_Price) else 0.0
+lowest_Price = float(lowest_Price) if not pd.isnull(lowest_Price) else 0.0
+top_airline = str(top_airline) if not pd.isnull(top_airline) else 'N/A'
+
 # Show The Cards
 card1.metric("Flight Count", f"{flight_count}", color="blue")
-card2.metric("Highest Price", f"{highest_Price}", color="blue")
-card3.metric("Lowest Price", f"{lowest_Price}", color="blue")
+card2.metric("Highest Price", f"{highest_Price:.2f}", color="blue")
+card3.metric("Lowest Price", f"{lowest_Price:.2f}", color="blue")
 card4.metric("Top Airline", f"{top_airline}", color="blue")
 
 # Dashboard Tabs
@@ -162,8 +169,7 @@ with tab2:
     )
     st.plotly_chart(fig, use_container_width=True)
 
-st.write("""
-From the initial inspection of the dataset, here are some key variables present:
+st.write("""From the initial inspection of the dataset, here are some key variables present:
 
 1. **Airline**: The carrier for each flight.
 2. **Source**: The departure city.
@@ -197,10 +203,4 @@ Here are some key insights from the exploratory data analysis (EDA) based on the
 4. **Day of Travel**:
    - Flights are spread across different days of the month, with no specific pattern based on the day alone, as the average day is around the 13th.
 
-5. **Month of Travel**:
-   - The data covers flights mainly from March to June.
-
-6. **Departure Hour**:
-   - The average departure time is around 12:45 PM.
-   - The earliest departure is at midnight (0:00), and the latest is at 11:00 PM (23:00).
-""")
+5. **Month of Travel
