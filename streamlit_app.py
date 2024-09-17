@@ -85,10 +85,10 @@ lowest_Price = filtered_data['Price'].min()
 top_airline = filtered_data['Airline'].value_counts().idxmax()
 
 # Show The Cards
-card1.metric("Flight Count", f"{flight_count}", color="blue")
-card2.metric("Highest Price", f"{highest_Price}", color="blue")
-card3.metric("Lowest Price", f"{lowest_Price}", color="blue")
-card4.metric("Top Airline", f"{top_airline}", color="blue")
+card1.metric("Flight Count", f"{int(flight_count)}", color="blue")
+card2.metric("Highest Price", f"{highest_Price:,.2f}", color="blue")
+card3.metric("Lowest Price", f"{lowest_Price:,.2f}", color="blue")
+card4.metric("Top Airline", top_airline, color="blue")
 
 # Dashboard Tabs
 tab1, tab2, tab3 = st.tabs(["🏠 Home", "📈 Insights", "🤖 Prediction"])
