@@ -162,7 +162,8 @@ with tab2:
     )
     st.plotly_chart(fig, use_container_width=True)
 
-st.write("""From the initial inspection of the dataset, here are some key variables present:
+st.write("""
+From the initial inspection of the dataset, here are some key variables present:
 
 1. **Airline**: The carrier for each flight.
 2. **Source**: The departure city.
@@ -176,6 +177,7 @@ st.write("""From the initial inspection of the dataset, here are some key variab
 10. **Dep_Hour**: The departure hour.
 """)
 
+st.write("""
 I will now perform some exploratory data analysis (EDA) to find deeper insights into this dataset, such as relationships between price and other factors, popular airlines, and more.
 
 Here are some key insights from the exploratory data analysis (EDA) based on the summary statistics:
@@ -201,6 +203,4 @@ Here are some key insights from the exploratory data analysis (EDA) based on the
 6. **Departure Hour**:
    - The average departure time is around 12:45 PM.
    - The earliest departure is at midnight (0:00), and the latest is at 11:00 PM (23:00).
-
-Next, I'll further analyze relationships between price and other factors (e.g., total stops, airline, and duration) to
-
+""")
