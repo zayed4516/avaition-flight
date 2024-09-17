@@ -48,7 +48,7 @@ with st.sidebar:
 
 
     st.sidebar.write("")
-    st.sidebar.markdown("Made by [Hussein zayed](https://github.com/HusseinZayed)")
+    st.sidebar.markdown("Made by [Mohamed zayed](https://github.com/zayed4516/)")
 
     # filtering Function
 def filter(airline, source, destination, add_info):
